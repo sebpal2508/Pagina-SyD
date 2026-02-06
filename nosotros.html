@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Suministros y Dotaciones Industriales de la Costa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 h-24 bg-[#A04000] shadow-md">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center text-white">
+                    <img src="Images/logo.jpg" alt="Logo"
+                        class="h-[74px] md:h-[82px] w-auto relative -top-1 md:-top-1.5" />
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html"
+                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+                    <a href="catalogo.html"
+                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catálogo</a>
+                    <a href="nosotros.html"
+                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
+                    <a href="contacto.html"
+                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <button id="cart-button"
+                            class="h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
+                            aria-label="Carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count"
+                                class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </button>
+                        <div id="cart-dropdown"
+                            class="absolute right-0 mt-4 w-64 bg-white border border-gray-300 rounded shadow-lg p-4 hidden z-10">
+                            <h3 class="font-semibold mb-2">Productos en el carrito:</h3>
+                            <ul id="cart-items-dropdown"></ul>
+                            <p class="font-bold mt-4">Total: $<span id="total-dropdown">0.00</span></p>
+                        </div>
+                    </div>
+                    <button id="menu-button" type="button"
+                        class="h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
+                        aria-label="Menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="menu-overlay" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true"></div>
+    <aside id="menu-panel"
+        class="fixed top-0 right-0 h-full w-64 bg-[#8B3A10] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex items-center justify-between px-6 h-20 border-b border-white/20">
+            <span class="text-lg font-bold">Menu</span>
+            <button id="menu-close" type="button" class="h-9 w-9 rounded-full hover:bg-white/10 transition"
+                aria-label="Cerrar menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-2 px-6 py-6 text-base">
+            <a href="index.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Inicio</a>
+            <a href="catalogo.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Catalogo</a>
+            <a href="nosotros.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Nosotros</a>
+            <a href="contacto.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Contacto</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="pt-24">
+        <!-- Slider Container -->
+        <div class="relative bg-gray-100 overflow-hidden" style="height: auto; min-height: 500px;">
+            <div id="slider" class="flex transition-transform duration-700 ease-in-out h-full">
+                <!-- Slide 1: Quiénes Somos -->
+                <div class="slide w-full flex-shrink-0 flex flex-col-reverse md:flex-row h-full">
+                    <div class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-white">
+                        <h2 class="text-3xl md:text-5xl font-bold text-orange-700 mb-4">Quiénes Somos</h2>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Somos una empresa comprometida con la seguridad y el bienestar de nuestros clientes.
+                            Contamos con más de 10 años de experiencia en la distribución de suministros y dotaciones
+                            industriales de la más alta calidad.
+                        </p>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed mt-4">
+                            Nuestro objetivo es proporcionar productos de seguridad laboral confiables que cumplan con
+                            las normas internacionales y ayuden a proteger a los trabajadores en sus entornos laborales.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/2 h-56 md:h-auto bg-gray-300">
+                        <img src="https://placehold.co/800x600/e65100/ffffff?text=Foto+Equipo" alt="Quiénes Somos"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- Slide 2: Nuestra Misión -->
+                <div class="slide w-full flex-shrink-0 flex flex-col-reverse md:flex-row h-full">
+                    <div class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-white">
+                        <h2 class="text-3xl md:text-5xl font-bold text-orange-700 mb-4">Nuestra Misión</h2>
+                        <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                            Ser el distribuidor líder de suministros y dotaciones industriales en la región, ofreciendo
+                            productos de excelente calidad, precios competitivos y un servicio al cliente de primera
+                            categoría.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-1/2 h-56 md:h-auto bg-gray-300">
+                        <img src="https://placehold.co/800x600/e65100/ffffff?text=Foto+Mision" alt="Nuestra Misión"
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <!-- Slide 3: Por Qué Elegirnos -->
+                <div class="slide w-full flex-shrink-0 flex flex-col-reverse md:flex-row h-full">
+                    <div class="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center bg-white">
+                        <h2 class="text-3xl md:text-5xl font-bold text-orange-700 mb-4">Por Qué Elegirnos</h2>
+                        <ul class="text-base md:text-lg text-gray-700 space-y-3 list-disc list-inside">
+                            <li>Productos de marcas reconocidas internacionalmente.</li>
+                            <li>Precios competitivos y promociones especiales.</li>
+                            <li>Asesoría profesional en seguridad industrial.</li>
+                            <li>Entrega rápida y confiable.</li>
+                            <li>Atención al cliente disponible por múltiples canales.</li>
+                            <li>Garantía en todos nuestros productos.</li>
+                        </ul>
+                    </div>
+                    <div class="w-full md:w-1/2 h-56 md:h-auto bg-gray-300">
+                        <img src="https://placehold.co/800x600/e65100/ffffff?text=Foto+Productos"
+                            alt="Por Qué Elegirnos" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 z-10">
+                <button onclick="goToSlide(0)"
+                    class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+                <button onclick="goToSlide(1)"
+                    class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+                <button onclick="goToSlide(2)"
+                    class="slider-dot w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 transition-opacity"></button>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button onclick="previousSlide()"
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-orange-600 p-3 rounded-full shadow-lg transition-all z-10">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button onclick="nextSlide()"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-80 hover:bg-opacity-100 text-orange-600 p-3 rounded-full shadow-lg transition-all z-10">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+        </div>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button id="whatsappBtn"
+            class="bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-colors duration-300 flex items-center gap-2">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="text-sm font-semibold hidden sm:inline">¡Hola! Tengo una duda</span>
+        </button>
+    </div>
+
+    <script src="assets/js/format-utils.js"></script>
+    <script>
+        // ===== SLIDER FUNCTIONALITY =====
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let autoSlideInterval;
+
+        function updateSlider() {
+            const slider = document.getElementById('slider');
+            const dots = document.querySelectorAll('.slider-dot');
+
+            // Move slider
+            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('opacity-50');
+                    dot.classList.add('opacity-100', 'bg-orange-600');
+                } else {
+                    dot.classList.remove('opacity-100', 'bg-orange-600');
+                    dot.classList.add('opacity-50');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                nextSlide();
+            }, 5000); // Cambiar cada 5 segundos
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Initialize slider
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSlider();
+            startAutoSlide();
+        });
+
+        // ===== CART MANAGEMENT =====
+        const cartBtn = document.getElementById('cart-button');
+        const cartDropdown = document.getElementById('cart-dropdown');
+        const cartItems = document.getElementById('cart-items-dropdown');
+        const cartCount = document.getElementById('cart-count');
+        const totalPrice = document.getElementById('total-dropdown');
+        const whatsappBtn = document.getElementById('whatsappBtn');
+
+        // `formatPrice` provided by assets/js/format-utils.js
+
+        // Toggle cart dropdown
+        cartBtn.addEventListener('click', () => {
+            cartDropdown.classList.toggle('hidden');
+            updateCartDisplay();
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!cartBtn.contains(e.target) && !cartDropdown.contains(e.target)) {
+                cartDropdown.classList.add('hidden');
+            }
+        });
+
+        function addToCart(name, price, quantity = 1) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProduct = cart.find(item => item.name === name);
+
+            if (existingProduct) {
+                existingProduct.quantity += quantity;
+            } else {
+                cart.push({ name, price, quantity });
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+            updateCartDisplay();
+            alert(`${name} agregado al carrito`);
+        }
+
+        function updateCartDisplay() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p class="text-center text-gray-500">El carrito está vacío</p>';
+                totalPrice.textContent = '$0';
+                cartCount.textContent = '0';
+                return;
+            }
+
+            cartItems.innerHTML = cart.map((item, index) => `
+                <div class="flex justify-between items-start py-2 border-b border-gray-200">
+                    <div class="flex-1">
+                        <p class="font-semibold text-sm">${item.name}</p>
+                        <p class="text-xs text-gray-600">${item.quantity}x ${formatPrice(item.price)} = ${formatPrice(item.price * item.quantity)}</p>
+                    </div>
+                    <button onclick="removeFromCart(${index})" class="text-red-500 hover:text-red-700 ml-2">
+                        <i class="fas fa-trash text-xs"></i>
+                    </button>
+                </div>
+            `).join('');
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            totalPrice.textContent = formatPrice(total).slice(1);
+            cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+        }
+
+        function removeFromCart(index) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartDisplay();
+        }
+
+        function generateWhatsAppMessage() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            if (cart.length === 0) {
+                const quick = encodeURIComponent('hola, quiero cotizar con ustedes unos productos');
+                window.open('https://wa.me/573001770901?text=' + quick, '_blank');
+                return;
+            }
+
+            let text = 'Hola, me gustaría hacer un pedido con los siguientes productos:\n\n';
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                text += `• ${item.quantity}x ${item.name} - ${formatPrice(itemTotal)}\n`;
+                total += itemTotal;
+            });
+
+            text += `\nTotal: ${formatPrice(total)}\n\n¿Cuál es la disponibilidad y forma de envío?`;
+            window.open('https://wa.me/573001770901?text=' + encodeURIComponent(text), '_blank');
+        }
+
+        whatsappBtn.addEventListener('click', generateWhatsAppMessage);
+
+        // Initialize cart display
+        updateCartDisplay();
+    </script>
+
+    <!-- Footer Profesional -->
+    <footer style="background: linear-gradient(135deg, #E65100 0%, #424242 100%);" class="text-white mt-16">
+        <!-- Contenido Principal del Footer -->
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- Columna 1: Identidad -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Suministros y Dotaciones<br>Industriales de la Costa</h3>
+                    <p class="text-gray-200 text-sm leading-relaxed">
+                        Líderes en seguridad industrial y dotaciones de alta calidad para tu empresa.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Mapa del Sitio -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="index.html"
+                                class="text-gray-200 hover:text-white transition-colors duration-200 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="nosotros.html"
+                                class="text-gray-200 hover:text-white transition-colors duration-200 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
+                                </svg>
+                                Nosotros
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dotaciones-generales.html"
+                                class="text-gray-200 hover:text-white transition-colors duration-200 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Productos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contacto.html"
+                                class="text-gray-200 hover:text-white transition-colors duration-200 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                </svg>
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información de Contacto -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-200">
+                                Cra 43 # 55 - 08 Local 1<br>
+                                Barranquilla, Colombia
+                            </span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <div class="text-gray-200">
+                                <a href="tel:+573012918181" class="hover:text-white transition-colors">+57 301 291
+                                    8181</a><br>
+                                <a href="tel:+573001770901" class="hover:text-white transition-colors">+57 300 177
+                                    0901</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <div class="text-gray-200">
+                                <a href="mailto:suministrosydotaciones1@gmail.com"
+                                    class="hover:text-white transition-colors break-all">
+                                    suministrosydotaciones1@gmail.com
+                                </a><br>
+                                <a href="mailto:suministrosydotaciones3@gmail.com"
+                                    class="hover:text-white transition-colors break-all">
+                                    suministrosydotaciones3@gmail.com
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Redes Sociales -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Síguenos</h3>
+                    <p class="text-gray-200 text-sm mb-4">Conéctate con nosotros en redes sociales</p>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/suministrosydotaciones.industrialesdelacosta.9"
+                            target="_blank" rel="noopener"
+                            class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all duration-200 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/suministrosydotaciones?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank" rel="noopener"
+                            class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all duration-200 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/suministros-y-dotaciones-industriales-de-la-costa/"
+                            target="_blank" rel="noopener"
+                            class="bg-white bg-opacity-20 hover:bg-opacity-30 p-3 rounded-full transition-all duration-200 transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Línea Divisoria -->
+        <div class="border-t border-white border-opacity-20"></div>
+
+        <!-- Barra de Copyright -->
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+                <p class="text-center md:text-left">
+                    © 2026 Suministros y Dotaciones Industriales de la Costa. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors duration-200">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors duration-200">Términos y Condiciones</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menuClose = document.getElementById('menu-close');
+        const menuPanel = document.getElementById('menu-panel');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        const openMenu = () => {
+            menuPanel.classList.remove('translate-x-full');
+            menuOverlay.classList.remove('hidden');
+            menuButton.setAttribute('aria-expanded', 'true');
+        };
+
+        const closeMenu = () => {
+            menuPanel.classList.add('translate-x-full');
+            menuOverlay.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+        };
+
+        menuButton.addEventListener('click', () => {
+            if (menuPanel.classList.contains('translate-x-full')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+    </script>
+</body>
+
+</html>

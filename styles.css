@@ -1,0 +1,712 @@
+/* Estilo para el botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Estilos modernos adicionales */
+body {
+    background-color: #F0F4F8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* Contenedor principal del header */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Contenedor logo + título (centrado) */
+.header-logo-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex: 1;
+}
+
+/* Logo pequeño como imagen */
+.header-logo img {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+
+/* Contenedor del título en dos líneas (centrado) */
+.header-title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.header-title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.header-title span {
+    display: block;
+}
+
+/* Instagram y carrito */
+.header-right {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.header-instagram {
+    flex-shrink: 0;
+}
+
+/* Social icons styling */
+.header-socials {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.header-socials a:hover {
+    background-color: white;
+    color: #E65100;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la navegación principal (centrada) */
+.main-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#cart-dropdown {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 16px;
+}
+
+/* Mostrar dropdown cuando JS añade la clase .open (no altera estilos por defecto) */
+#cart-dropdown.open {
+    display: block;
+}
+
+#cart-dropdown h3,
+#cart-dropdown p {
+    color: #1f2937;
+}
+
+#cart-dropdown ul {
+    color: #1f2937;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Limitar ancho visual del input de búsqueda y centrarlo
+   - No se cambian clases ni IDs ni JS. Solo estilo visual. */
+#search {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+/* PASO 2: Estilos para el nuevo buscador mejorado */
+#search-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Input del buscador con espacio para botón X */
+.search-input {
+    padding-right: 40px !important;
+}
+
+.search-button {
+    background: linear-gradient(135deg, #E65100 0%, #424242 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(230, 81, 0, 0.3);
+}
+
+.search-button:hover {
+    background: linear-gradient(135deg, #D84315 0%, #303030 100%);
+    box-shadow: 0 4px 10px rgba(230, 81, 0, 0.5);
+    transform: translateY(-2px);
+}
+
+.search-button:active {
+    transform: translateY(0);
+}
+
+.btn-clear {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    right: 12px;
+}
+
+.btn-clear:hover {
+    color: #E65100 !important;
+    transform: scale(1.2);
+}
+
+/* Clase para ocultar elementos sin romper el grid */
+.search-hidden {
+    display: none !important;
+}
+
+/* Mayor especificidad para móvil donde product-section tiene display: block !important */
+.product-section.search-hidden {
+    display: none !important;
+}
+
+/* Responsive: sólo dentro de media queries para no afectar desktop */
+
+@media (max-width: 1024px) {
+
+    /* Tablet grande: mantener 3 columnas para aprovechar espacio */
+    .product-section {
+        display: block;
+        width: 100%;
+        margin: 1% 0;
+        box-sizing: border-box;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .section-page .product-card {
+        width: 100%;
+    }
+
+    /* Ajuste fino del buscador en tablet grande */
+    #search {
+        max-width: 560px;
+    }
+
+    /* Mantener proporciones de imagen dentro de las cards */
+    .product-card img {
+        max-height: 260px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .header-top {
+        align-items: center;
+    }
+
+    .header-logo img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Contenedor principal del header: flujo vertical compacto */
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        position: relative;
+        min-height: 35px;
+    }
+
+    /* Redes sociales en esquina superior izquierda - más arriba */
+    .header-socials {
+        display: flex !important;
+        gap: 6px;
+        position: absolute !important;
+        top: 5px;
+        left: 5px;
+        z-index: 10;
+    }
+
+    .header-socials a {
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 13px !important;
+    }
+
+    /* Carrito en esquina superior derecha - más arriba */
+    .header-right {
+        position: absolute !important;
+        top: 5px;
+        right: 5px;
+        z-index: 10;
+    }
+
+    #cart-button {
+        padding: 5px 8px !important;
+        font-size: 13px;
+    }
+
+    /* Logo + título centrado SIN margen superior, alineado con iconos */
+    .header-logo-title {
+        gap: 6px;
+        justify-content: center;
+        margin-top: 0 !important;
+        margin-bottom: 3px;
+        padding-top: 3px;
+        text-align: center;
+    }
+
+    .header-logo img {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .header-title {
+        font-size: 11px !important;
+        line-height: 1 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Navegación centrada debajo del logo, sin espacios */
+    .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2px;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .main-nav a {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    /* Buscador responsive en móvil */
+    #search-container {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .search-input {
+        font-size: 14px;
+        padding: 10px 35px 10px 12px !important;
+    }
+
+    .search-button,
+    .btn-search {
+        padding: 10px 16px !important;
+        font-size: 16px;
+    }
+
+    /* Títulos de páginas principales en main (fuera del header) */
+    main h1 {
+        font-size: 1.75rem !important;
+        /* 28px */
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    /* Mobile: FORZAR 1 columna para que las cards se vean amplias */
+    .product-section {
+        display: block !important;
+        width: 100% !important;
+        margin: 12px auto !important;
+        padding: 20px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .section-page .product-card {
+        width: 100% !important;
+    }
+
+    .product-card {
+        padding: 16px;
+        width: 100% !important;
+    }
+
+    .product-card img {
+        max-height: 280px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #search {
+        max-width: 480px;
+        padding: 8px;
+    }
+
+    /* Imagen de sección más grande en móvil */
+    .section-image {
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0;
+        position: relative;
+        min-height: 30px;
+    }
+
+    /* Redes sociales en esquina superior izquierda - muy arriba */
+    .header-socials {
+        gap: 5px;
+        position: absolute !important;
+        top: 3px;
+        left: 3px;
+        z-index: 10;
+    }
+
+    .header-socials a {
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 12px !important;
+    }
+
+    /* Carrito en esquina superior derecha - muy arriba */
+    .header-right {
+        position: absolute !important;
+        top: 3px;
+        right: 3px;
+        z-index: 10;
+    }
+
+    #cart-button {
+        padding: 4px 7px !important;
+        font-size: 11px;
+    }
+
+    /* Logo + título centrado SIN margen superior */
+    .header-logo-title {
+        margin-top: 0 !important;
+        margin-bottom: 2px;
+        padding-top: 2px;
+        text-align: center;
+    }
+
+    .header-logo img {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .header-title {
+        font-size: 10px !important;
+        line-height: 1 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Navegación centrada horizontal - sin espacios */
+    .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        gap: 6px;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1px;
+        margin-bottom: 0;
+    }
+
+    .main-nav a {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+
+    /* Buscador extra compacto en móviles pequeños */
+    #search {
+        font-size: 13px;
+        padding: 8px 32px 8px 10px !important;
+    }
+
+    .search-button {
+        padding: 8px 12px !important;
+        font-size: 14px;
+    }
+
+    /* Títulos de páginas principales en main (móviles pequeños) */
+    main h1 {
+        font-size: 1.5rem !important;
+        /* 24px */
+        margin-top: 0 !important;
+        text-align: center;
+    }
+
+    .product-section {
+        width: 100%;
+        margin: 10px 0;
+        padding: 16px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .product-card {
+        width: 100%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .product-card img {
+        max-height: 280px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Search pequeño pero centrado. Mantenerlo cercano al tamaño desktop visualmente */
+    #search {
+        max-width: 320px;
+        padding: 8px;
+    }
+
+    /* Prevent horizontal overflow caused by fixed elements */
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.section-header {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.section-header:hover {
+    color: #E65100;
+}
+
+.section-header i {
+    color: #E65100;
+    margin-right: 8px;
+}
+
+.product-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    display: inline-block;
+    width: 45%;
+    vertical-align: top;
+    margin: 1%;
+}
+
+.product-section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product-grid {
+    display: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #424242 0%, #E65100 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #E65100 0%, #424242 100%);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+.btn-primary.px-3 {
+    padding: 6px 12px;
+    font-size: 14px;
+    min-width: 35px;
+}
+
+/* Estilos para inputs de cantidad */
+input[type="number"][data-product] {
+    font-size: 14px;
+    padding: 6px;
+}
+
+input[type="number"][data-product]::-webkit-outer-spin-button,
+input[type="number"][data-product]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"][data-product] {
+    -moz-appearance: textfield;
+}
+
+#cart {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para páginas de secciones individuales */
+.section-page .product-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.section-page .product-card {
+    width: calc(33.333% - 14px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: auto;
+}
+
+/* Estilos para imágenes de productos */
+.section-page .product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* Estilos para el contenido de la tarjeta */
+.section-page .product-card>div:last-child {
+    margin-top: auto;
+}
+
+/* Styles for main page product cards */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para el botón de envío del formulario de contacto */
+#contactForm button[type="submit"] {
+    background: linear-gradient(135deg, #E65100 0%, #424242 100%) !important;
+    color: white !important;
+    width: auto !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease !important;
+}
+
+#contactForm button[type="submit"]:hover {
+    background: linear-gradient(135deg, #D84315 0%, #303030 100%) !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
+    transform: translateY(-2px);
+}

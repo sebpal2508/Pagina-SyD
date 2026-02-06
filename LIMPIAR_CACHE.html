@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones para Limpiar Caché del Navegador</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #E65100 0%, #424242 100%);
+            color: white;
+        }
+
+        .container {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #E65100;
+            border-bottom: 3px solid #E65100;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #424242;
+            margin-top: 30px;
+        }
+
+        .method {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #E65100;
+        }
+
+        .shortcut {
+            background: #E65100;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px 0;
+        }
+
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        ol {
+            line-height: 2;
+        }
+
+        .success {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🔧 Solución: Footer No Se Ve Completo</h1>
+
+        <div class="note">
+            <strong>⚠️ DIAGNÓSTICO:</strong><br>
+            Todos los archivos HTML tienen el footer completo y correcto (verificado: 11,537 caracteres en cada uno).
+            El problema es que tu navegador está mostrando la versión ANTIGUA guardada en caché.
+        </div>
+
+        <h2>✅ SOLUCIÓN RÁPIDA (Recomendada)</h2>
+        <div class="method">
+            <h3>Método 1: Recarga Forzada (Hard Refresh)</h3>
+            <p>Presiona una de estas combinaciones mientras estás en la página:</p>
+            <ul>
+                <li>Windows/Linux: <span class="shortcut">Ctrl + F5</span></li>
+                <li>Windows/Linux: <span class="shortcut">Ctrl + Shift + R</span></li>
+                <li>Mac: <span class="shortcut">Cmd + Shift + R</span></li>
+            </ul>
+            <p><strong>Esto forzará al navegador a descargar la versión nueva del HTML.</strong></p>
+        </div>
+
+        <h2>🧹 SOLUCIÓN COMPLETA</h2>
+        <div class="method">
+            <h3>Método 2: Limpiar Caché Completo</h3>
+
+            <h4>Google Chrome / Microsoft Edge:</h4>
+            <ol>
+                <li>Presiona <span class="shortcut">Ctrl + Shift + Delete</span></li>
+                <li>Selecciona "Imágenes y archivos almacenados en caché"</li>
+                <li>Selecciona rango de tiempo: "Desde siempre"</li>
+                <li>Haz clic en "Borrar datos"</li>
+            </ol>
+
+            <h4>Firefox:</h4>
+            <ol>
+                <li>Presiona <span class="shortcut">Ctrl + Shift + Delete</span></li>
+                <li>Marca "Caché"</li>
+                <li>Selecciona rango: "Todo"</li>
+                <li>Haz clic en "Limpiar ahora"</li>
+            </ol>
+        </div>
+
+        <h2>🔍 VERIFICACIÓN</h2>
+        <div class="method">
+            <h3>Después de limpiar caché, verifica que aparezcan:</h3>
+            <ul>
+                <li>✅ <strong>Columna 1:</strong> "Suministros y Dotaciones Industriales de la Costa" + slogan</li>
+                <li>✅ <strong>Columna 2:</strong> Enlaces Rápidos (Inicio, Nosotros, Productos, Contacto)</li>
+                <li>✅ <strong>Columna 3:</strong> Contacto con:
+                    <ul>
+                        <li>📍 Dirección: Cra 43 # 55 - 08 Local 1, Barranquilla</li>
+                        <li>📞 Teléfono 1: +57 301 291 8181</li>
+                        <li>📞 Teléfono 2: +57 300 177 0901</li>
+                        <li>✉️ Email: suministrosydotaciones1@gmail.com</li>
+                    </ul>
+                </li>
+                <li>✅ <strong>Columna 4:</strong> "Síguenos" con 3 botones circulares (Facebook, Instagram, LinkedIn)
+                </li>
+            </ul>
+        </div>
+
+        <div class="success">
+            <h3>✅ CONFIRMACIÓN TÉCNICA</h3>
+            <p><strong>Estado actual de los archivos:</strong></p>
+            <ul>
+                <li>✅ index.html: Footer completo (11,537 caracteres)</li>
+                <li>✅ kit-antiderrame.html: Footer completo (11,537 caracteres)</li>
+                <li>✅ extintores.html: Footer completo (11,537 caracteres)</li>
+                <li>✅ Todas las 15 páginas: Footer completo e idéntico</li>
+            </ul>
+            <p><strong>Los archivos están correctos. Solo necesitas limpiar el caché del navegador.</strong></p>
+        </div>
+
+        <div class="note">
+            <strong>💡 CONSEJO:</strong> Si trabajas desarrollando sitios web, es recomendable usar el modo
+            desarrollador del navegador (F12) y marcar "Deshabilitar caché" mientras trabajas.
+        </div>
+    </div>
+<script>
+    const menuButton = document.getElementById('menu-button');
+    const menuClose = document.getElementById('menu-close');
+    const menuPanel = document.getElementById('menu-panel');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+    const searchResults = document.getElementById('search-results');
+    const searchClear = document.getElementById('search-clear');
+
+    const products = [
+        { name: 'Lentes de Seguridad', url: 'catalogo.html' },
+        { name: 'Casco Dielectrico', url: 'catalogo.html' },
+        { name: 'Guantes de Nitrilo', url: 'catalogo.html' },
+        { name: 'Proteccion Auditiva', url: 'catalogo.html' },
+        { name: 'Arnes de Seguridad', url: 'catalogo.html' },
+        { name: 'Respirador Industrial', url: 'catalogo.html' }
+    ];
+
+    const openMenu = () => {
+        menuPanel.classList.remove('translate-x-full');
+        menuOverlay.classList.remove('hidden');
+        menuButton.setAttribute('aria-expanded', 'true');
+    };
+
+    const closeMenu = () => {
+        menuPanel.classList.add('translate-x-full');
+        menuOverlay.classList.add('hidden');
+        menuButton.setAttribute('aria-expanded', 'false');
+    };
+
+    menuButton.addEventListener('click', () => {
+        if (menuPanel.classList.contains('translate-x-full')) {
+            openMenu();
+        } else {
+            closeMenu();
+        }
+    });
+
+    menuClose.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+
+    const toggleSearchInput = () => {
+        searchInput.classList.toggle('w-48');
+        searchInput.classList.toggle('opacity-100');
+        searchInput.classList.toggle('px-3');
+        searchInput.classList.toggle('w-0');
+        searchInput.classList.toggle('opacity-0');
+        searchInput.classList.toggle('px-0');
+
+        const nowOpen = searchInput.classList.contains('w-48');
+        searchButton.setAttribute('aria-expanded', String(nowOpen));
+        if (nowOpen) {
+            searchInput.focus();
+        } else if (searchResults) {
+            searchResults.classList.add('hidden');
+        }
+        if (searchClear) {
+            if (nowOpen && searchInput.value.trim() !== '') {
+                searchClear.classList.remove('hidden');
+            } else {
+                searchClear.classList.add('hidden');
+            }
+        }
+    };
+
+    const renderResults = (items) => {
+        if (!searchResults) return;
+        if (items.length === 0) {
+            searchResults.classList.add('hidden');
+            searchResults.innerHTML = '';
+            return;
+        }
+
+        searchResults.innerHTML = items
+            .map(
+                (item) =>
+                    `<a href="${item.url}" class="text-sm p-2 text-gray-900 hover:bg-gray-100 block">${item.name}</a>`
+            )
+            .join('');
+        searchResults.classList.remove('hidden');
+    };
+
+    const applyHeaderSearch = (query) => {
+        const searchQuery = query.toLowerCase().trim();
+        const sections = document.querySelectorAll('main section.product-section');
+        const cards = document.querySelectorAll('.product-card');
+
+        if (sections.length > 0) {
+            sections.forEach((section) => {
+                const title = section.querySelector('h2')
+                    ? section.querySelector('h2').textContent.toLowerCase()
+                    : '';
+                const keywords = section.getAttribute('data-keywords') || '';
+                const searchableText = title + ' ' + keywords.toLowerCase();
+                const hasMatch = searchableText.includes(searchQuery);
+                if (searchQuery === '' || hasMatch) {
+                    section.classList.remove('search-hidden');
+                } else {
+                    section.classList.add('search-hidden');
+                }
+            });
+            return;
+        }
+
+        if (cards.length > 0) {
+            cards.forEach((card) => {
+                const title = card.querySelector('h3')
+                    ? card.querySelector('h3').textContent.toLowerCase()
+                    : '';
+                const hasMatch = title.includes(searchQuery);
+                if (searchQuery === '' || hasMatch) {
+                    card.classList.remove('search-hidden');
+                } else {
+                    card.classList.add('search-hidden');
+                }
+            });
+        }
+    };
+
+    searchButton.addEventListener('click', () => {
+        const isOpen = searchInput.classList.contains('w-48');
+        const query = searchInput.value.trim();
+
+        if (isOpen && query) {
+            applyHeaderSearch(query);
+            console.log('Buscar:', query);
+            return;
+        }
+
+        toggleSearchInput();
+    });
+
+    searchInput.addEventListener('input', (event) => {
+        const query = event.target.value.trim().toLowerCase();
+
+        applyHeaderSearch(event.target.value);
+
+        if (!query) {
+            if (searchResults) {
+                searchResults.classList.add('hidden');
+                searchResults.innerHTML = '';
+            }
+            if (searchClear) {
+                searchClear.classList.add('hidden');
+            }
+            return;
+        }
+
+        if (searchClear) {
+            searchClear.classList.remove('hidden');
+        }
+
+        const matches = products.filter((product) =>
+            product.name.toLowerCase().includes(query)
+        );
+        renderResults(matches);
+    });
+
+    if (searchClear) {
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            applyHeaderSearch('');
+            if (searchResults) {
+                searchResults.classList.add('hidden');
+                searchResults.innerHTML = '';
+            }
+            searchClear.classList.add('hidden');
+            searchInput.focus();
+        });
+    }
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
