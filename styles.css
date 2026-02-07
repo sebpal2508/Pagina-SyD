@@ -199,6 +199,42 @@ body {
     transform: translateY(-2px);
 }
 
+@keyframes bounce-slow {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2.8s ease-in-out infinite;
+}
+
+@keyframes gear-spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes gear-spin-reverse {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.gear-spin {
+    animation: gear-spin 1.6s linear infinite;
+}
+
+.gear-spin-reverse {
+    animation: gear-spin-reverse 1.8s linear infinite;
+}
+
 .search-button:active {
     transform: translateY(0);
 }
