@@ -5,7 +5,7 @@
     <!-- 1. CODIFICACIÓN UTF-8 CORREGIDA -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOMBRE DEL PRODUCTO - Suministros y Dotaciones Industriales de la Costa</title>
+    <title>Producto de Seguridad Industrial | S&D</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -14,77 +14,78 @@
 <body class="section-page">
     <!-- 2. HEADER ACTUALIZADO CON MENÚ HAMBURGUESA -->
     <header class="fixed top-0 w-full z-50 h-24 bg-[#A04000] shadow-md">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="flex items-center justify-between h-24">
-            <a href="index.html" class="flex items-center text-white">
-                <img src="Images/logo.jpg" alt="Logo" class="h-12 w-auto" />
-            </a>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-24">
+                <a href="index.html" class="flex items-center text-white">
+                    <img src="Images/logo.jpg" alt="Logo" class="h-12 w-auto" />
+                </a>
 
-            <div class="flex items-center gap-3">
-                <div class="flex flex-row-reverse items-center">
-                    <button id="search-button" type="button"
-                        class="ml-2 h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
-                        aria-label="Buscar" aria-expanded="false">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <div class="relative">
-                        <input id="search-input" type="text" placeholder="Buscar"
-                            class="w-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out bg-white text-black rounded-md h-9 px-0 pr-8" />
-                        <button id="search-clear" type="button"
-                            class="btn-clear absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 hidden"
-                            aria-label="Limpiar busqueda">
-                            <i class="fas fa-times text-sm"></i>
+                <div class="flex items-center gap-3">
+                    <div class="flex flex-row-reverse items-center">
+                        <button id="search-button" type="button"
+                            class="ml-2 h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
+                            aria-label="Buscar" aria-expanded="false">
+                            <i class="fas fa-search"></i>
                         </button>
-                        <div id="search-results"
-                            class="absolute top-full left-0 w-full bg-white border border-gray-200 shadow-xl rounded-b-md z-50 max-h-60 overflow-y-auto hidden"></div>
+                        <div class="relative">
+                            <input id="search-input" type="text" placeholder="Buscar"
+                                class="w-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out bg-white text-black rounded-md h-9 px-0 pr-8" />
+                            <button id="search-clear" type="button"
+                                class="btn-clear absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 hidden"
+                                aria-label="Limpiar busqueda">
+                                <i class="fas fa-times text-sm"></i>
+                            </button>
+                            <div id="search-results"
+                                class="absolute top-full left-0 w-full bg-white border border-gray-200 shadow-xl rounded-b-md z-50 max-h-60 overflow-y-auto hidden">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="relative">
-                    <button id="cart-button"
+                    <div class="relative">
+                        <button id="cart-button"
+                            class="h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
+                            aria-label="Carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count"
+                                class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </button>
+                        <div id="cart-dropdown"
+                            class="absolute right-0 mt-4 w-64 bg-white border border-gray-300 rounded shadow-lg p-4 hidden z-10">
+                            <h3 class="font-semibold mb-2">Productos en el carrito:</h3>
+                            <ul id="cart-items-dropdown"></ul>
+                            <p class="font-bold mt-4">Total: $<span id="total-dropdown">0.00</span></p>
+                        </div>
+                    </div>
+                    <button id="menu-button" type="button"
                         class="h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
-                        aria-label="Carrito">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span id="cart-count"
-                            class="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        aria-label="Menu" aria-expanded="false">
+                        <i class="fas fa-bars"></i>
                     </button>
-                    <div id="cart-dropdown"
-                        class="absolute right-0 mt-4 w-64 bg-white border border-gray-300 rounded shadow-lg p-4 hidden z-10">
-                        <h3 class="font-semibold mb-2">Productos en el carrito:</h3>
-                        <ul id="cart-items-dropdown"></ul>
-                        <p class="font-bold mt-4">Total: $<span id="total-dropdown">0.00</span></p>
-                    </div>
                 </div>
-                <button id="menu-button" type="button"
-                    class="h-10 w-10 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition"
-                    aria-label="Menu" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<div id="menu-overlay" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true"></div>
-<aside id="menu-panel"
-    class="fixed top-0 right-0 h-full w-64 bg-[#8B3A10] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
-    <div class="flex items-center justify-between px-6 h-20 border-b border-white/20">
-        <span class="text-lg font-bold">Menu</span>
-        <button id="menu-close" type="button" class="h-9 w-9 rounded-full hover:bg-white/10 transition"
-            aria-label="Cerrar menu">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-    <nav class="flex flex-col gap-2 px-6 py-6 text-base">
-        <a href="index.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Inicio</a>
-        <a href="catalogo.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Catalogo</a>
-        <a href="nosotros.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Nosotros</a>
-        <a href="contacto.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Contacto</a>
-    </nav>
-</aside>
+    <div id="menu-overlay" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true"></div>
+    <aside id="menu-panel"
+        class="fixed top-0 right-0 h-full w-64 bg-[#8B3A10] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        <div class="flex items-center justify-between px-6 h-20 border-b border-white/20">
+            <span class="text-lg font-bold">Menu</span>
+            <button id="menu-close" type="button" class="h-9 w-9 rounded-full hover:bg-white/10 transition"
+                aria-label="Cerrar menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-2 px-6 py-6 text-base">
+            <a href="index.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Inicio</a>
+            <a href="catalogo.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Catalogo</a>
+            <a href="nosotros.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Nosotros</a>
+            <a href="contacto.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Contacto</a>
+        </nav>
+    </aside>
 
     <main class="px-4 pb-6 pt-24">
         <!-- Buscador -->
-        
+
 
         <!-- Sección de Productos -->
         <section class="max-w-7xl mx-auto px-4">
@@ -176,7 +177,7 @@
 
             localStorage.setItem('cart', JSON.stringify(cart));
             console.log('Cart guardado en localStorage:', localStorage.getItem('cart'));
-            alert(`${quantity} unidad(es) añadida(s) al carrito`);
+            showToast(`${quantity} unidad(es) añadida(s) al carrito`);
             window.location.href = 'index.html';
         }
 
@@ -444,6 +445,16 @@
                                 Contacto
                             </a>
                         </li>
+                        <li>
+                            <a href="politica.html"
+                                class="text-gray-200 hover:text-white transition-colors duration-200 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0013.414 6L10 2.586A2 2 0 008.586 2H6zm4 1.414L12.586 6H10V3.414zM6 4h3v4h5v10H6V4z" />
+                                </svg>
+                                Política de Privacidad
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -543,191 +554,186 @@
                     © 2026 Suministros y Dotaciones Industriales de la Costa. Todos los derechos reservados.
                 </p>
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-white transition-colors duration-200">Política de Privacidad</a>
+                    <a href="politica.html" class="hover:text-white transition-colors duration-200">Política de
+                        Privacidad</a>
                     <a href="#" class="hover:text-white transition-colors duration-200">Términos y Condiciones</a>
                 </div>
             </div>
         </div>
     </footer>
 
-<script>
-    const menuButton = document.getElementById('menu-button');
-    const menuClose = document.getElementById('menu-close');
-    const menuPanel = document.getElementById('menu-panel');
-    const menuOverlay = document.getElementById('menu-overlay');
-    const searchButton = document.getElementById('search-button');
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-    const searchClear = document.getElementById('search-clear');
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menuClose = document.getElementById('menu-close');
+        const menuPanel = document.getElementById('menu-panel');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const searchButton = document.getElementById('search-button');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const searchClear = document.getElementById('search-clear');
 
-    const products = [
-        { name: 'Lentes de Seguridad', url: 'catalogo.html' },
-        { name: 'Casco Dielectrico', url: 'catalogo.html' },
-        { name: 'Guantes de Nitrilo', url: 'catalogo.html' },
-        { name: 'Proteccion Auditiva', url: 'catalogo.html' },
-        { name: 'Arnes de Seguridad', url: 'catalogo.html' },
-        { name: 'Respirador Industrial', url: 'catalogo.html' }
-    ];
+        const products = [
+            { name: 'Lentes de Seguridad', url: 'catalogo.html' },
+            { name: 'Casco Dielectrico', url: 'catalogo.html' },
+            { name: 'Guantes de Nitrilo', url: 'catalogo.html' },
+            { name: 'Proteccion Auditiva', url: 'catalogo.html' },
+            { name: 'Arnes de Seguridad', url: 'catalogo.html' },
+            { name: 'Respirador Industrial', url: 'catalogo.html' }
+        ];
 
-    const openMenu = () => {
-        menuPanel.classList.remove('translate-x-full');
-        menuOverlay.classList.remove('hidden');
-        menuButton.setAttribute('aria-expanded', 'true');
-    };
+        const openMenu = () => {
+            menuPanel.classList.remove('translate-x-full');
+            menuOverlay.classList.remove('hidden');
+            menuButton.setAttribute('aria-expanded', 'true');
+        };
 
-    const closeMenu = () => {
-        menuPanel.classList.add('translate-x-full');
-        menuOverlay.classList.add('hidden');
-        menuButton.setAttribute('aria-expanded', 'false');
-    };
+        const closeMenu = () => {
+            menuPanel.classList.add('translate-x-full');
+            menuOverlay.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+        };
 
-    menuButton.addEventListener('click', () => {
-        if (menuPanel.classList.contains('translate-x-full')) {
-            openMenu();
-        } else {
-            closeMenu();
-        }
-    });
-
-    menuClose.addEventListener('click', closeMenu);
-    menuOverlay.addEventListener('click', closeMenu);
-
-    const toggleSearchInput = () => {
-        searchInput.classList.toggle('w-48');
-        searchInput.classList.toggle('opacity-100');
-        searchInput.classList.toggle('px-3');
-        searchInput.classList.toggle('w-0');
-        searchInput.classList.toggle('opacity-0');
-        searchInput.classList.toggle('px-0');
-
-        const nowOpen = searchInput.classList.contains('w-48');
-        searchButton.setAttribute('aria-expanded', String(nowOpen));
-        if (nowOpen) {
-            searchInput.focus();
-        } else if (searchResults) {
-            searchResults.classList.add('hidden');
-        }
-        if (searchClear) {
-            if (nowOpen && searchInput.value.trim() !== '') {
-                searchClear.classList.remove('hidden');
+        menuButton.addEventListener('click', () => {
+            if (menuPanel.classList.contains('translate-x-full')) {
+                openMenu();
             } else {
-                searchClear.classList.add('hidden');
+                closeMenu();
             }
-        }
-    };
+        });
 
-    const renderResults = (items) => {
-        if (!searchResults) return;
-        if (items.length === 0) {
-            searchResults.classList.add('hidden');
-            searchResults.innerHTML = '';
-            return;
-        }
+        menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
 
-        searchResults.innerHTML = items
-            .map(
-                (item) =>
-                    `<a href="${item.url}" class="text-sm p-2 text-gray-900 hover:bg-gray-100 block">${item.name}</a>`
-            )
-            .join('');
-        searchResults.classList.remove('hidden');
-    };
+        const toggleSearchInput = () => {
+            searchInput.classList.toggle('w-48');
+            searchInput.classList.toggle('opacity-100');
+            searchInput.classList.toggle('px-3');
+            searchInput.classList.toggle('w-0');
+            searchInput.classList.toggle('opacity-0');
+            searchInput.classList.toggle('px-0');
 
-    const applyHeaderSearch = (query) => {
-        const searchQuery = query.toLowerCase().trim();
-        const sections = document.querySelectorAll('main section.product-section');
-        const cards = document.querySelectorAll('.product-card');
-
-        if (sections.length > 0) {
-            sections.forEach((section) => {
-                const title = section.querySelector('h2')
-                    ? section.querySelector('h2').textContent.toLowerCase()
-                    : '';
-                const keywords = section.getAttribute('data-keywords') || '';
-                const searchableText = title + ' ' + keywords.toLowerCase();
-                const hasMatch = searchableText.includes(searchQuery);
-                if (searchQuery === '' || hasMatch) {
-                    section.classList.remove('search-hidden');
-                } else {
-                    section.classList.add('search-hidden');
-                }
-            });
-            return;
-        }
-
-        if (cards.length > 0) {
-            cards.forEach((card) => {
-                const title = card.querySelector('h3')
-                    ? card.querySelector('h3').textContent.toLowerCase()
-                    : '';
-                const hasMatch = title.includes(searchQuery);
-                if (searchQuery === '' || hasMatch) {
-                    card.classList.remove('search-hidden');
-                } else {
-                    card.classList.add('search-hidden');
-                }
-            });
-        }
-    };
-
-    searchButton.addEventListener('click', () => {
-        const isOpen = searchInput.classList.contains('w-48');
-        const query = searchInput.value.trim();
-
-        if (isOpen && query) {
-            applyHeaderSearch(query);
-            console.log('Buscar:', query);
-            return;
-        }
-
-        toggleSearchInput();
-    });
-
-    searchInput.addEventListener('input', (event) => {
-        const query = event.target.value.trim().toLowerCase();
-
-        applyHeaderSearch(event.target.value);
-
-        if (!query) {
-            if (searchResults) {
+            const nowOpen = searchInput.classList.contains('w-48');
+            searchButton.setAttribute('aria-expanded', String(nowOpen));
+            if (nowOpen) {
+                searchInput.focus();
+            } else if (searchResults) {
                 searchResults.classList.add('hidden');
-                searchResults.innerHTML = '';
             }
             if (searchClear) {
-                searchClear.classList.add('hidden');
+                if (nowOpen && searchInput.value.trim() !== '') {
+                    searchClear.classList.remove('hidden');
+                } else {
+                    searchClear.classList.add('hidden');
+                }
             }
-            return;
-        }
+        };
 
-        if (searchClear) {
-            searchClear.classList.remove('hidden');
-        }
-
-        const matches = products.filter((product) =>
-            product.name.toLowerCase().includes(query)
-        );
-        renderResults(matches);
-    });
-
-    if (searchClear) {
-        searchClear.addEventListener('click', () => {
-            searchInput.value = '';
-            applyHeaderSearch('');
-            if (searchResults) {
+        const renderResults = (items) => {
+            if (!searchResults) return;
+            if (items.length === 0) {
                 searchResults.classList.add('hidden');
                 searchResults.innerHTML = '';
+                return;
             }
-            searchClear.classList.add('hidden');
-            searchInput.focus();
+
+            searchResults.innerHTML = items
+                .map(
+                    (item) =>
+                        `<a href="${item.url}" class="text-sm p-2 text-gray-900 hover:bg-gray-100 block">${item.name}</a>`
+                )
+                .join('');
+            searchResults.classList.remove('hidden');
+        };
+
+        const applyHeaderSearch = (query) => {
+            const searchQuery = query.toLowerCase().trim();
+            const sections = document.querySelectorAll('main section.product-section');
+            const cards = document.querySelectorAll('.product-card');
+
+            if (sections.length > 0) {
+                sections.forEach((section) => {
+                    const title = section.querySelector('h2')
+                        ? section.querySelector('h2').textContent.toLowerCase()
+                        : '';
+                    const keywords = section.getAttribute('data-keywords') || '';
+                    const searchableText = title + ' ' + keywords.toLowerCase();
+                    const hasMatch = searchableText.includes(searchQuery);
+                    if (searchQuery === '' || hasMatch) {
+                        section.classList.remove('search-hidden');
+                    } else {
+                        section.classList.add('search-hidden');
+                    }
+                });
+                return;
+            }
+
+            if (cards.length > 0) {
+                cards.forEach((card) => {
+                    const title = card.querySelector('h3')
+                        ? card.querySelector('h3').textContent.toLowerCase()
+                        : '';
+                    const hasMatch = title.includes(searchQuery);
+                    if (searchQuery === '' || hasMatch) {
+                        card.classList.remove('search-hidden');
+                    } else {
+                        card.classList.add('search-hidden');
+                    }
+                });
+            }
+        };
+
+        searchButton.addEventListener('click', () => {
+            const isOpen = searchInput.classList.contains('w-48');
+            const query = searchInput.value.trim();
+
+            if (isOpen && query) {
+                applyHeaderSearch(query);
+                console.log('Buscar:', query);
+                return;
+            }
+
+            toggleSearchInput();
         });
-    }
-</script>
+
+        searchInput.addEventListener('input', (event) => {
+            const query = event.target.value.trim().toLowerCase();
+
+            applyHeaderSearch(event.target.value);
+
+            if (!query) {
+                if (searchResults) {
+                    searchResults.classList.add('hidden');
+                    searchResults.innerHTML = '';
+                }
+                if (searchClear) {
+                    searchClear.classList.add('hidden');
+                }
+                return;
+            }
+
+            if (searchClear) {
+                searchClear.classList.remove('hidden');
+            }
+
+            const matches = products.filter((product) =>
+                product.name.toLowerCase().includes(query)
+            );
+            renderResults(matches);
+        });
+
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                applyHeaderSearch('');
+                if (searchResults) {
+                    searchResults.classList.add('hidden');
+                    searchResults.innerHTML = '';
+                }
+                searchClear.classList.add('hidden');
+                searchInput.focus();
+            });
+        }
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-

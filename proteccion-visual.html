@@ -6,10 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="Images/favicon.png">
     <link rel="apple-touch-icon" href="Images/favicon.png">
-    <title>Protección Visual - Suministros y Dotaciones Industriales de la Costa</title>
+    <title>Protección Visual y Gafas | S&D</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Ads main script placeholder -->
+    <script>
+        // TODO: Paste ad network script here.
+    </script>
 </head>
 
 <body class="section-page">
@@ -398,9 +402,11 @@
         </section>
     </main>
 
-    <a href="https://wa.me/573001770901?text=%C2%BFHola%2C%20tengo%20una%20pregunta%20sobre%20sus%20productos%3F"
-        class="whatsapp-button" target="_blank" id="whatsapp-link">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/573001770901" target="_blank" rel="noopener" id="whatsapp-link"
+        onclick="this.href='https://wa.me/573001770901?text=' + (typeof generateWhatsAppMessage === 'function' ? generateWhatsAppMessage() : '')"
+        class="fixed bottom-4 right-4 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] shadow-lg hover:brightness-110 transition">
+        <span class="sr-only">WhatsApp</span>
+        <i class="fab fa-whatsapp text-white text-2xl"></i>
     </a>
 
     <script src="assets/js/format-utils.js"></script>
@@ -420,7 +426,7 @@
 
             localStorage.setItem('cart', JSON.stringify(cart));
             console.log('Cart guardado en localStorage:', localStorage.getItem('cart'));
-            alert(`${quantity} unidad(es) añadida(s) al carrito`);
+            showToast(`${quantity} unidad(es) añadida(s) al carrito`);
         }
 
         function getQuantity(productName) {
@@ -621,6 +627,12 @@
         })();
     </script>
     <!-- Footer Profesional -->
+    <div class="w-full max-w-7xl mx-auto my-8 px-4 text-center">
+        <div
+            class="bg-gray-50 border border-gray-200 rounded-lg p-4 flex items-center justify-center min-h-[100px] md:min-h-[250px]">
+            <span class="text-gray-400 text-sm font-medium">Espacio Patrocinado</span>
+        </div>
+    </div>
     <footer style="background: linear-gradient(135deg, #E65100 0%, #424242 100%);" class="text-white mt-16">
         <!-- Contenido Principal del Footer -->
         <div class="max-w-7xl mx-auto px-6 py-12">
@@ -677,6 +689,16 @@
                                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                                 </svg>
                                 Contacto
+                            </a>
+                        </li>
+                        <li>
+                            <a href="politica.html"
+                                class="text-gray-200 hover:text-white transition-colors duration-200 flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0013.414 6L10 2.586A2 2 0 008.586 2H6zm4 1.414L12.586 6H10V3.414zM6 4h3v4h5v10H6V4z" />
+                                </svg>
+                                Política de Privacidad
                             </a>
                         </li>
                     </ul>
@@ -772,8 +794,10 @@
                     © 2026 Suministros y Dotaciones Industriales de la Costa. Todos los derechos reservados.
                 </p>
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-white transition-colors duration-200">Política de Privacidad</a>
-                    <a href="#" class="hover:text-white transition-colors duration-200">Términos y Condiciones</a>
+                    <a href="politica.html" class="hover:text-white transition-colors duration-200">Política de
+                        Privacidad</a>
+                    <a href="terminos.html" class="hover:text-white transition-colors duration-200">Términos y
+                        Condiciones</a>
                 </div>
             </div>
         </div>
