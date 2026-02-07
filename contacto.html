@@ -149,7 +149,8 @@
                     <h3 class="text-xl font-bold text-gray-800 mb-4">Envía tu Mensaje</h3>
 
                     <form id="contactForm" class="space-y-4" name="contacto" data-netlify="true"
-                        action="https://formsubmit.co/suministrosydotaciones3@gmail.com" method="POST">
+                        netlify-honeypot="bot-field" action="gracias.html" method="POST">
+                        <input type="hidden" name="form-name" value="contacto">
                         <div>
                             <label class="block text-sm font-semibold text-gray-800 mb-1">Nombre</label>
                             <input type="text" name="name" required
@@ -174,15 +175,12 @@
                                 class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-600"></textarea>
                         </div>
 
-                        <!-- FormSubmit configuration -->
-                        <input type="hidden" name="_subject" value="Nuevo mensaje de contacto desde el sitio web">
-                        <input type="hidden" name="_cc" value="suministrosydotaciones1@gmail.com">
-                        <input type="hidden" name="_template" value="table">
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- URL absoluta requerida por FormSubmit - actualizar con el dominio real cuando esté desplegado -->
-                        <input type="hidden" name="_next" value="http://127.0.0.1:5500/gracias.html">
                         <!-- Honeypot anti-spam field (hidden from users) -->
-                        <input type="text" name="_honey" style="display:none" autocomplete="off">
+                        <p class="hidden">
+                            <label>Si eres humano deja este campo vacío:
+                                <input name="bot-field" autocomplete="off">
+                            </label>
+                        </p>
 
                         <button type="submit"
                             class="w-full bg-orange-600 text-white py-3 rounded-lg font-bold text-lg hover:bg-orange-700 transition-colors shadow-md">
