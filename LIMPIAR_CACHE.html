@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instrucciones para Limpiar Caché del Navegador</title>
     <script src="https://cdn.tailwindcss.com"></script>
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background: linear-gradient(135deg, #E65100 0%, #424242 100%);
+            background: linear-gradient(135deg, #FF6B5A 0%, #E55B4A 100%);
             color: white;
         }
 
@@ -25,8 +25,8 @@
         }
 
         h1 {
-            color: #E65100;
-            border-bottom: 3px solid #E65100;
+            color: #FF6B5A;
+            border-bottom: 3px solid #FF6B5A;
             padding-bottom: 10px;
         }
 
@@ -40,11 +40,11 @@
             padding: 20px;
             border-radius: 5px;
             margin: 20px 0;
-            border-left: 4px solid #E65100;
+            border-left: 4px solid #FF6B5A;
         }
 
         .shortcut {
-            background: #E65100;
+            background: #FF6B5A;
             color: white;
             padding: 5px 15px;
             border-radius: 5px;
@@ -154,184 +154,178 @@
             desarrollador del navegador (F12) y marcar "Deshabilitar caché" mientras trabajas.
         </div>
     </div>
-<script>
-    const menuButton = document.getElementById('menu-button');
-    const menuClose = document.getElementById('menu-close');
-    const menuPanel = document.getElementById('menu-panel');
-    const menuOverlay = document.getElementById('menu-overlay');
-    const searchButton = document.getElementById('search-button');
-    const searchInput = document.getElementById('search-input');
-    const searchResults = document.getElementById('search-results');
-    const searchClear = document.getElementById('search-clear');
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menuClose = document.getElementById('menu-close');
+        const menuPanel = document.getElementById('menu-panel');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const searchButton = document.getElementById('search-button');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const searchClear = document.getElementById('search-clear');
 
-    const products = [
-        { name: 'Lentes de Seguridad', url: 'catalogo.html' },
-        { name: 'Casco Dielectrico', url: 'catalogo.html' },
-        { name: 'Guantes de Nitrilo', url: 'catalogo.html' },
-        { name: 'Proteccion Auditiva', url: 'catalogo.html' },
-        { name: 'Arnes de Seguridad', url: 'catalogo.html' },
-        { name: 'Respirador Industrial', url: 'catalogo.html' }
-    ];
+        const products = [
+            { name: 'Lentes de Seguridad', url: 'catalogo.html' },
+            { name: 'Casco Dielectrico', url: 'catalogo.html' },
+            { name: 'Guantes de Nitrilo', url: 'catalogo.html' },
+            { name: 'Proteccion Auditiva', url: 'catalogo.html' },
+            { name: 'Arnes de Seguridad', url: 'catalogo.html' },
+            { name: 'Respirador Industrial', url: 'catalogo.html' }
+        ];
 
-    const openMenu = () => {
-        menuPanel.classList.remove('translate-x-full');
-        menuOverlay.classList.remove('hidden');
-        menuButton.setAttribute('aria-expanded', 'true');
-    };
+        const openMenu = () => {
+            menuPanel.classList.remove('translate-x-full');
+            menuOverlay.classList.remove('hidden');
+            menuButton.setAttribute('aria-expanded', 'true');
+        };
 
-    const closeMenu = () => {
-        menuPanel.classList.add('translate-x-full');
-        menuOverlay.classList.add('hidden');
-        menuButton.setAttribute('aria-expanded', 'false');
-    };
+        const closeMenu = () => {
+            menuPanel.classList.add('translate-x-full');
+            menuOverlay.classList.add('hidden');
+            menuButton.setAttribute('aria-expanded', 'false');
+        };
 
-    menuButton.addEventListener('click', () => {
-        if (menuPanel.classList.contains('translate-x-full')) {
-            openMenu();
-        } else {
-            closeMenu();
-        }
-    });
-
-    menuClose.addEventListener('click', closeMenu);
-    menuOverlay.addEventListener('click', closeMenu);
-
-    const toggleSearchInput = () => {
-        searchInput.classList.toggle('w-48');
-        searchInput.classList.toggle('opacity-100');
-        searchInput.classList.toggle('px-3');
-        searchInput.classList.toggle('w-0');
-        searchInput.classList.toggle('opacity-0');
-        searchInput.classList.toggle('px-0');
-
-        const nowOpen = searchInput.classList.contains('w-48');
-        searchButton.setAttribute('aria-expanded', String(nowOpen));
-        if (nowOpen) {
-            searchInput.focus();
-        } else if (searchResults) {
-            searchResults.classList.add('hidden');
-        }
-        if (searchClear) {
-            if (nowOpen && searchInput.value.trim() !== '') {
-                searchClear.classList.remove('hidden');
+        menuButton.addEventListener('click', () => {
+            if (menuPanel.classList.contains('translate-x-full')) {
+                openMenu();
             } else {
-                searchClear.classList.add('hidden');
+                closeMenu();
             }
-        }
-    };
+        });
 
-    const renderResults = (items) => {
-        if (!searchResults) return;
-        if (items.length === 0) {
-            searchResults.classList.add('hidden');
-            searchResults.innerHTML = '';
-            return;
-        }
+        menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
 
-        searchResults.innerHTML = items
-            .map(
-                (item) =>
-                    `<a href="${item.url}" class="text-sm p-2 text-gray-900 hover:bg-gray-100 block">${item.name}</a>`
-            )
-            .join('');
-        searchResults.classList.remove('hidden');
-    };
+        const toggleSearchInput = () => {
+            searchInput.classList.toggle('w-48');
+            searchInput.classList.toggle('opacity-100');
+            searchInput.classList.toggle('px-3');
+            searchInput.classList.toggle('w-0');
+            searchInput.classList.toggle('opacity-0');
+            searchInput.classList.toggle('px-0');
 
-    const applyHeaderSearch = (query) => {
-        const searchQuery = query.toLowerCase().trim();
-        const sections = document.querySelectorAll('main section.product-section');
-        const cards = document.querySelectorAll('.product-card');
-
-        if (sections.length > 0) {
-            sections.forEach((section) => {
-                const title = section.querySelector('h2')
-                    ? section.querySelector('h2').textContent.toLowerCase()
-                    : '';
-                const keywords = section.getAttribute('data-keywords') || '';
-                const searchableText = title + ' ' + keywords.toLowerCase();
-                const hasMatch = searchableText.includes(searchQuery);
-                if (searchQuery === '' || hasMatch) {
-                    section.classList.remove('search-hidden');
-                } else {
-                    section.classList.add('search-hidden');
-                }
-            });
-            return;
-        }
-
-        if (cards.length > 0) {
-            cards.forEach((card) => {
-                const title = card.querySelector('h3')
-                    ? card.querySelector('h3').textContent.toLowerCase()
-                    : '';
-                const hasMatch = title.includes(searchQuery);
-                if (searchQuery === '' || hasMatch) {
-                    card.classList.remove('search-hidden');
-                } else {
-                    card.classList.add('search-hidden');
-                }
-            });
-        }
-    };
-
-    searchButton.addEventListener('click', () => {
-        const isOpen = searchInput.classList.contains('w-48');
-        const query = searchInput.value.trim();
-
-        if (isOpen && query) {
-            applyHeaderSearch(query);
-            console.log('Buscar:', query);
-            return;
-        }
-
-        toggleSearchInput();
-    });
-
-    searchInput.addEventListener('input', (event) => {
-        const query = event.target.value.trim().toLowerCase();
-
-        applyHeaderSearch(event.target.value);
-
-        if (!query) {
-            if (searchResults) {
+            const nowOpen = searchInput.classList.contains('w-48');
+            searchButton.setAttribute('aria-expanded', String(nowOpen));
+            if (nowOpen) {
+                searchInput.focus();
+            } else if (searchResults) {
                 searchResults.classList.add('hidden');
-                searchResults.innerHTML = '';
             }
             if (searchClear) {
-                searchClear.classList.add('hidden');
+                if (nowOpen && searchInput.value.trim() !== '') {
+                    searchClear.classList.remove('hidden');
+                } else {
+                    searchClear.classList.add('hidden');
+                }
             }
-            return;
-        }
+        };
 
-        if (searchClear) {
-            searchClear.classList.remove('hidden');
-        }
-
-        const matches = products.filter((product) =>
-            product.name.toLowerCase().includes(query)
-        );
-        renderResults(matches);
-    });
-
-    if (searchClear) {
-        searchClear.addEventListener('click', () => {
-            searchInput.value = '';
-            applyHeaderSearch('');
-            if (searchResults) {
+        const renderResults = (items) => {
+            if (!searchResults) return;
+            if (items.length === 0) {
                 searchResults.classList.add('hidden');
                 searchResults.innerHTML = '';
+                return;
             }
-            searchClear.classList.add('hidden');
-            searchInput.focus();
+
+            searchResults.innerHTML = items
+                .map(
+                    (item) =>
+                        `<a href="${item.url}" class="text-sm p-2 text-gray-900 hover:bg-gray-100 block">${item.name}</a>`
+                )
+                .join('');
+            searchResults.classList.remove('hidden');
+        };
+
+        const applyHeaderSearch = (query) => {
+            const searchQuery = query.toLowerCase().trim();
+            const sections = document.querySelectorAll('main section.product-section');
+            const cards = document.querySelectorAll('.product-card');
+
+            if (sections.length > 0) {
+                sections.forEach((section) => {
+                    const title = section.querySelector('h2')
+                        ? section.querySelector('h2').textContent.toLowerCase()
+                        : '';
+                    const keywords = section.getAttribute('data-keywords') || '';
+                    const searchableText = title + ' ' + keywords.toLowerCase();
+                    const hasMatch = searchableText.includes(searchQuery);
+                    if (searchQuery === '' || hasMatch) {
+                        section.classList.remove('search-hidden');
+                    } else {
+                        section.classList.add('search-hidden');
+                    }
+                });
+                return;
+            }
+
+            if (cards.length > 0) {
+                cards.forEach((card) => {
+                    const title = card.querySelector('h3')
+                        ? card.querySelector('h3').textContent.toLowerCase()
+                        : '';
+                    const hasMatch = title.includes(searchQuery);
+                    if (searchQuery === '' || hasMatch) {
+                        card.classList.remove('search-hidden');
+                    } else {
+                        card.classList.add('search-hidden');
+                    }
+                });
+            }
+        };
+
+        searchButton.addEventListener('click', () => {
+            const isOpen = searchInput.classList.contains('w-48');
+            const query = searchInput.value.trim();
+
+            if (isOpen && query) {
+                applyHeaderSearch(query);
+                console.log('Buscar:', query);
+                return;
+            }
+
+            toggleSearchInput();
         });
-    }
-</script>
+
+        searchInput.addEventListener('input', (event) => {
+            const query = event.target.value.trim().toLowerCase();
+
+            applyHeaderSearch(event.target.value);
+
+            if (!query) {
+                if (searchResults) {
+                    searchResults.classList.add('hidden');
+                    searchResults.innerHTML = '';
+                }
+                if (searchClear) {
+                    searchClear.classList.add('hidden');
+                }
+                return;
+            }
+
+            if (searchClear) {
+                searchClear.classList.remove('hidden');
+            }
+
+            const matches = products.filter((product) =>
+                product.name.toLowerCase().includes(query)
+            );
+            renderResults(matches);
+        });
+
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                applyHeaderSearch('');
+                if (searchResults) {
+                    searchResults.classList.add('hidden');
+                    searchResults.innerHTML = '';
+                }
+                searchClear.classList.add('hidden');
+                searchInput.focus();
+            });
+        }
+    </script>
 </body>
 
 </html>
-
-
-
-
-
-

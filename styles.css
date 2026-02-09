@@ -632,7 +632,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #424242 0%, #E65100 100%);
+    background: linear-gradient(90deg, #1D1B67 0%, #000000 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -643,7 +643,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #E65100 0%, #424242 100%);
+    opacity: 0.9;
 }
 
 .btn-primary:active {
@@ -728,7 +728,7 @@ input[type="number"][data-product] {
 
 /* Estilo para el botón de envío del formulario de contacto */
 #contactForm button[type="submit"] {
-    background: linear-gradient(135deg, #E65100 0%, #424242 100%) !important;
+    background: linear-gradient(90deg, #1D1B67 0%, #000000 100%) !important;
     color: white !important;
     width: auto !important;
     padding: 10px 20px !important;
@@ -742,7 +742,7 @@ input[type="number"][data-product] {
 }
 
 #contactForm button[type="submit"]:hover {
-    background: linear-gradient(135deg, #D84315 0%, #303030 100%) !important;
+    opacity: 0.9 !important;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
     transform: translateY(-2px);
 }

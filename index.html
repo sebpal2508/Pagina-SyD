@@ -18,35 +18,33 @@
 
 <body>
     <div id="preloader"
-        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-[#A04000] to-[#8a3700] transition-opacity duration-500 ease-out opacity-100">
-        <div class="mb-8 animate-pulse">
-            <h1 class="text-5xl font-bold text-white tracking-widest">S&D</h1>
+        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#1D1B67] transition-opacity duration-500 ease-out opacity-100">
+        <div class="mb-6 animate-pulse">
+            <h1 class="text-6xl font-bold text-white tracking-widest">S&D</h1>
         </div>
-        <div class="w-72 h-72 md:w-96 md:h-96 flex items-center justify-center opacity-80">
-            <div class="flex items-center">
-                <i class="fa-solid fa-gear gear-spin text-6xl md:text-7xl text-white"></i>
-                <i class="fa-solid fa-gear gear-spin-reverse text-4xl md:text-5xl text-white -ml-3"></i>
-            </div>
+        <div class="flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-[#FF6B5A] animate-bounce"></span>
+            <span class="w-4 h-4 rounded-full bg-[#FF6B5A] animate-bounce" style="animation-delay: 150ms;"></span>
+            <span class="w-4 h-4 rounded-full bg-[#FF6B5A] animate-bounce" style="animation-delay: 300ms;"></span>
         </div>
-        <p class="text-white mt-8 text-lg font-light tracking-wider animate-pulse">Preparando tu seguridad...</p>
+        <p class="text-gray-400 mt-6 text-sm font-light tracking-wider">Preparando tu seguridad...</p>
     </div>
-    <header class="fixed top-0 w-full z-50 h-24 bg-[#A04000] shadow-md">
+    <header class="fixed top-0 w-full z-50 h-24 bg-gradient-to-r from-[#FF6B5A] to-[#E55B4A] shadow-md">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-24">
                 <a href="index.html" class="flex items-center text-white">
-                    <img src="Images/logo.jpg" alt="Logo"
-                        class="h-[74px] md:h-[82px] w-auto relative -top-1 md:-top-1.5" />
+                    <img src="Images/logo.jpg" alt="Logo" class="h-[96px] md:h-[107px] w-auto" />
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
                     <a href="catalogo.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catálogo</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catálogo</a>
                     <a href="nosotros.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
                     <a href="contacto.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
                 </nav>
 
                 <div class="flex items-center gap-3">
@@ -78,7 +76,7 @@
     <!-- Sidebar Menu -->
     <div id="menu-overlay" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true"></div>
     <aside id="menu-panel"
-        class="fixed top-0 right-0 h-full w-64 bg-[#8B3A10] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        class="fixed top-0 right-0 h-full w-64 bg-[#FF6B5A] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
         <div class="flex items-center justify-between px-6 h-20 border-b border-white/20">
             <span class="text-lg font-bold">Menu</span>
             <button id="menu-close" type="button" class="h-9 w-9 rounded-full hover:bg-white/10 transition"
@@ -87,10 +85,14 @@
             </button>
         </div>
         <nav class="flex flex-col gap-2 px-6 py-6 text-base">
-            <a href="index.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Inicio</a>
-            <a href="catalogo.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Catalogo</a>
-            <a href="nosotros.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Nosotros</a>
-            <a href="contacto.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Contacto</a>
+            <a href="index.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+            <a href="catalogo.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catalogo</a>
+            <a href="nosotros.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
+            <a href="contacto.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
         </nav>
     </aside>
 
@@ -126,8 +128,7 @@
                     <div class="flex flex-col sm:flex-row gap-5 items-start">
                         <!-- Botón 1: Ver Catálogo (Gradiente Header) -->
                         <a href="catalogo.html"
-                            class="inline-flex items-center justify-center gap-3 px-10 py-5 text-white font-bold text-lg rounded-full transition-all duration-300 shadow-lg"
-                            style="background: linear-gradient(135deg, #E65100 0%, #424242 100%);">
+                            class="inline-flex items-center justify-center gap-3 px-10 py-5 text-white font-bold text-lg rounded-full transition-all duration-300 shadow-lg bg-gradient-to-r from-[#1D1B67] to-black hover:opacity-90">
                             <i class="fas fa-shopping-bag text-xl"></i>
                             Explorar Catálogo
                         </a>
@@ -135,8 +136,7 @@
                         <!-- Botón 2: WhatsApp (Gradiente Header) -->
                         <a href="https://wa.me/573001770901?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n"
                             target="_blank"
-                            class="inline-flex items-center justify-center gap-3 px-10 py-5 text-white font-bold text-lg rounded-full transition-all duration-300 shadow-lg"
-                            style="background: linear-gradient(135deg, #E65100 0%, #424242 100%);">
+                            class="inline-flex items-center justify-center gap-3 px-10 py-5 text-white font-bold text-lg rounded-full transition-all duration-300 shadow-lg bg-gradient-to-r from-[#1D1B67] to-black hover:opacity-90">
                             <i class="fab fa-whatsapp text-2xl"></i>
                             Cotizar por WhatsApp
                         </a>
@@ -163,7 +163,7 @@
                                 <i class="fas fa-truck text-3xl"></i>
                             </div>
                             <h3
-                                class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-600 transition-colors">
+                                class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-[#FF6B5A] transition-colors">
                                 Envíos Rápidos
                             </h3>
                             <p class="text-gray-600 leading-relaxed">
@@ -247,7 +247,7 @@
                             <h3 class="text-3xl font-bold text-white mb-4">Kits Antiderrame</h3>
                             <p class="text-white/90 mb-6 text-lg">Protección ambiental y contención profesional</p>
                             <span
-                                class="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-full font-bold group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
+                                class="inline-flex items-center gap-2 bg-gradient-to-r from-[#1D1B67] to-black text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300">
                                 Ver Productos <i
                                     class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
                             </span>
@@ -269,7 +269,7 @@
                             <h3 class="text-3xl font-bold text-white mb-4">Protección Personal</h3>
                             <p class="text-white/90 mb-6 text-lg">EPP completo certificado para toda tu empresa</p>
                             <span
-                                class="inline-flex items-center gap-2 bg-white text-orange-600 px-6 py-3 rounded-full font-bold group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                                class="inline-flex items-center gap-2 bg-gradient-to-r from-[#1D1B67] to-black text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300">
                                 Ver Productos <i
                                     class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
                             </span>
@@ -291,7 +291,7 @@
                             <h3 class="text-3xl font-bold text-white mb-4">Señalizaciones</h3>
                             <p class="text-white/90 mb-6 text-lg">Seguridad vial e industrial visible y efectiva</p>
                             <span
-                                class="inline-flex items-center gap-2 bg-white text-yellow-600 px-6 py-3 rounded-full font-bold group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
+                                class="inline-flex items-center gap-2 bg-gradient-to-r from-[#1D1B67] to-black text-white px-6 py-3 rounded-full font-bold hover:opacity-90 transition-all duration-300">
                                 Ver Productos <i
                                     class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"></i>
                             </span>
@@ -323,7 +323,7 @@
                     <!-- Columna Texto -->
                     <div class="order-1 lg:order-2">
                         <div
-                            class="inline-block bg-orange-100 text-orange-700 px-4 py-2 rounded-full font-semibold text-sm mb-6">
+                            class="inline-block bg-[#FF6B5A]/10 text-[#FF6B5A] px-4 py-2 rounded-full font-semibold text-sm mb-6">
                             <i class="fas fa-star mr-2"></i>Más de 10 años de experiencia
                         </div>
                         <h2 class="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
@@ -335,7 +335,7 @@
                         <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                             En <strong class="text-gray-900">Suministros y Dotaciones Industriales de la Costa</strong>,
                             somos el aliado estratégico de las principales empresas en la Costa Caribe.
-                            Nuestra misión: <span class="text-orange-600 font-semibold">equipos de seguridad de clase
+                            Nuestra misión: <span class="text-[#FF6B5A] font-semibold">equipos de seguridad de clase
                                 mundial</span>
                             que protejan tu activo más valioso.
                         </p>
@@ -348,7 +348,7 @@
                         <!-- Stats Mini -->
                         <div class="grid grid-cols-3 gap-6 mb-8">
                             <div class="text-center">
-                                <div class="text-3xl font-black text-orange-600 mb-1">100+</div>
+                                <div class="text-3xl font-black text-[#FF6B5A] mb-1">100+</div>
                                 <div class="text-sm text-gray-600">Empresas</div>
                             </div>
                             <div class="text-center">
@@ -356,13 +356,13 @@
                                 <div class="text-sm text-gray-600">Certificado</div>
                             </div>
                             <div class="text-center">
-                                <i class="fas fa-user-gear text-orange-600 text-3xl mb-2"></i>
+                                <i class="fas fa-user-gear text-[#FF6B5A] text-3xl mb-2"></i>
                                 <div class="text-sm text-gray-600 font-semibold">Asesoría Técnica</div>
                             </div>
                         </div>
 
                         <a href="nosotros.html"
-                            class="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-orange-600 hover:to-red-600 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                            class="inline-flex items-center gap-3 bg-gradient-to-r from-[#1D1B67] to-black text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 hover:opacity-90">
                             Descubre Nuestra Historia
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -374,7 +374,7 @@
         <!-- Banner Final CTA B2B - Premium Design -->
         <section class="relative py-24 overflow-hidden">
             <!-- Fondo con Gradiente Llamativo -->
-            <div class="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-600 to-gray-900"></div>
+            <div class="absolute inset-0 bg-[#1D1B67]"></div>
 
             <!-- Patrón de Fondo (Opcional - Decorativo) -->
             <div class="absolute inset-0 opacity-10">
@@ -403,35 +403,30 @@
 
                 <!-- Botón Premium con Gradiente Inverso -->
                 <a href="contacto.html"
-                    class="group relative inline-flex items-center justify-center px-12 py-6 bg-white text-orange-600 font-black text-xl rounded-full overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-white/50 hover:scale-110 mb-10">
-                    <span class="relative z-10 flex items-center gap-3">
+                    class="inline-flex items-center justify-center px-12 py-6 bg-[#FF6B5A] text-white font-black text-xl rounded-full transition-all hover:bg-[#E55B4A] hover:scale-105 mb-10">
+                    <span class="flex items-center gap-3">
                         <i class="fas fa-file-invoice text-2xl"></i>
                         Solicitar Cotización Formal
                     </span>
-                    <div
-                        class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    </div>
                 </a>
 
                 <!-- Información de Contacto -->
                 <div class="flex flex-col sm:flex-row gap-8 justify-center items-center">
                     <div class="flex items-center gap-3 text-white">
-                        <div
-                            class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 bg-[#FF6B5A] rounded-full flex items-center justify-center">
                             <i class="fas fa-phone text-xl"></i>
                         </div>
                         <div class="text-left flex flex-col">
                             <span class="text-sm text-white/70">Llámanos</span>
-                            <a href="tel:+573012918181" class="font-bold text-lg hover:text-orange-200 transition">+57
+                            <a href="tel:+573012918181" class="font-bold text-lg hover:text-[#FF6B5A] transition">+57
                                 301 291 8181</a>
-                            <a href="tel:+573001770901" class="font-bold text-lg hover:text-orange-200 transition">+57
+                            <a href="tel:+573001770901" class="font-bold text-lg hover:text-[#FF6B5A] transition">+57
                                 300 177 0901</a>
                         </div>
                     </div>
 
                     <div class="flex items-center gap-3 text-white">
-                        <div
-                            class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                        <div class="w-12 h-12 bg-[#FF6B5A] rounded-full flex items-center justify-center">
                             <i class="fas fa-envelope text-xl"></i>
                         </div>
                         <div class="text-left flex flex-col">
@@ -561,7 +556,7 @@
             <span class="text-gray-400 text-sm font-medium">Espacio Patrocinado</span>
         </div>
     </div>
-    <footer style="background: linear-gradient(135deg, #E65100 0%, #424242 100%);" class="text-white mt-16">
+    <footer class="text-white mt-16 bg-gradient-to-r from-[#FF6B5A] to-[#E55B4A]">
         <!-- Contenido Principal del Footer -->
         <div class="max-w-7xl mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

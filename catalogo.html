@@ -18,35 +18,33 @@
 
 <body>
     <div id="preloader"
-        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gradient-to-br from-[#A04000] to-[#8a3700] transition-opacity duration-500 ease-out opacity-100">
-        <div class="mb-8 animate-pulse">
-            <h1 class="text-5xl font-bold text-white tracking-widest">S&D</h1>
+        class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#1D1B67] transition-opacity duration-500 ease-out opacity-100">
+        <div class="mb-6 animate-pulse">
+            <h1 class="text-6xl font-bold text-white tracking-widest">S&D</h1>
         </div>
-        <div class="w-72 h-72 md:w-96 md:h-96 flex items-center justify-center opacity-80">
-            <div class="flex items-center">
-                <i class="fa-solid fa-gear gear-spin text-6xl md:text-7xl text-white"></i>
-                <i class="fa-solid fa-gear gear-spin-reverse text-4xl md:text-5xl text-white -ml-3"></i>
-            </div>
+        <div class="flex items-center gap-3">
+            <span class="w-4 h-4 rounded-full bg-[#FF6B5A] animate-bounce"></span>
+            <span class="w-4 h-4 rounded-full bg-[#FF6B5A] animate-bounce" style="animation-delay: 150ms;"></span>
+            <span class="w-4 h-4 rounded-full bg-[#FF6B5A] animate-bounce" style="animation-delay: 300ms;"></span>
         </div>
-        <p class="text-white mt-8 text-lg font-light tracking-wider animate-pulse">Preparando tu seguridad...</p>
+        <p class="text-gray-400 mt-6 text-sm font-light tracking-wider">Preparando tu seguridad...</p>
     </div>
-    <header class="fixed top-0 w-full z-50 h-24 bg-[#A04000] shadow-md">
+    <header class="fixed top-0 w-full z-50 h-24 bg-gradient-to-r from-[#FF6B5A] to-[#E55B4A] shadow-md">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-between h-24">
                 <a href="index.html" class="flex items-center text-white">
-                    <img src="Images/logo.jpg" alt="Logo"
-                        class="h-[74px] md:h-[82px] w-auto relative -top-1 md:-top-1.5" />
+                    <img src="Images/logo.jpg" alt="Logo" class="h-[96px] md:h-[107px] w-auto" />
                 </a>
 
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="index.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
                     <a href="catalogo.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catálogo</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catálogo</a>
                     <a href="nosotros.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
                     <a href="contacto.html"
-                        class="relative text-white font-medium text-sm py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
+                        class="relative text-white font-bold text-lg py-2 transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
                 </nav>
 
                 <div class="flex items-center gap-3">
@@ -96,7 +94,7 @@
 
     <div id="menu-overlay" class="fixed inset-0 bg-black/40 hidden z-40" aria-hidden="true"></div>
     <aside id="menu-panel"
-        class="fixed top-0 right-0 h-full w-64 bg-[#8B3A10] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+        class="fixed top-0 right-0 h-full w-64 bg-[#FF6B5A] text-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
         <div class="flex items-center justify-between px-6 h-20 border-b border-white/20">
             <span class="text-lg font-bold">Menu</span>
             <button id="menu-close" type="button" class="h-9 w-9 rounded-full hover:bg-white/10 transition"
@@ -105,10 +103,14 @@
             </button>
         </div>
         <nav class="flex flex-col gap-2 px-6 py-6 text-base">
-            <a href="index.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Inicio</a>
-            <a href="catalogo.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Catalogo</a>
-            <a href="nosotros.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Nosotros</a>
-            <a href="contacto.html" class="py-2 px-2 rounded hover:bg-white/10 transition">Contacto</a>
+            <a href="index.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Inicio</a>
+            <a href="catalogo.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Catalogo</a>
+            <a href="nosotros.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Nosotros</a>
+            <a href="contacto.html"
+                class="relative text-white font-bold text-lg py-2 px-2 rounded transition-colors duration-300 hover:text-gray-100 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">Contacto</a>
         </nav>
     </aside>
 
@@ -125,26 +127,6 @@
             <h2 class="section-header text-xl font-semibold mb-4"
                 onclick="window.location.href='dotaciones-generales.html'"><i class="fas fa-tools"></i> Dotaciones
                 Generales</h2>
-        </section>
-
-        <!-- Kit Antiderrame -->
-        <section class="my-8 product-section"
-            data-keywords="kit antiderrame derrame emergencia ambiental limpieza contención absorbente">
-            <img src="Images/KIT-ANTIDERRAME.jpg" alt="Kit Antiderrame" class="section-image"
-                onclick="window.location.href='kit-antiderrame.html'">
-            <h2 class="section-header text-xl font-semibold mb-4" onclick="window.location.href='kit-antiderrame.html'">
-                <i class="fas fa-tint"></i> Kit Antiderrame
-            </h2>
-        </section>
-
-        <!-- Extintores -->
-        <section class="my-8 product-section"
-            data-keywords="extintor extintores fuego incendio seguridad emergencia abc co2 solkaflam">
-            <img src="Images/EXTINTORES.png" alt="Extintores" class="section-image"
-                onclick="window.location.href='extintores.html'">
-            <h2 class="section-header text-xl font-semibold mb-4" onclick="window.location.href='extintores.html'"><i
-                    class="fas fa-fire-extinguisher"></i> Extintores
-            </h2>
         </section>
 
         <!-- Protecciones Auditivas -->
@@ -169,24 +151,24 @@
             </h2>
         </section>
 
-        <!-- Protección de Manos -->
+        <!-- Protección Manual -->
         <section class="my-8 product-section"
             data-keywords="guantes manos proteccion carnaza latex nitrilo antideslizante seguridad">
-            <img src="Images/PROTECCION-MANOS.png" alt="Protección de Manos" class="section-image"
+            <img src="Images/PROTECCION-MANOS.png" alt="Protección Manual" class="section-image"
                 onclick="window.location.href='proteccion-manos.html'">
             <h2 class="section-header text-xl font-semibold mb-4"
-                onclick="window.location.href='proteccion-manos.html'"><i class="fas fa-hand-paper"></i> Protección de
-                Manos
+                onclick="window.location.href='proteccion-manos.html'"><i class="fas fa-hand-paper"></i> Protección
+                Manual
             </h2>
         </section>
 
-        <!-- Protección de Pies -->
+        <!-- Calzado de seguridad -->
         <section class="my-8 product-section"
             data-keywords="botas zapatos calzado pies proteccion puntera acero seguridad">
-            <img src="Images/PROTECCION-PIES.png" alt="Protección de Pies" class="section-image"
+            <img src="Images/PROTECCION-PIES.png" alt="Calzado de seguridad" class="section-image"
                 onclick="window.location.href='proteccion-pies.html'">
             <h2 class="section-header text-xl font-semibold mb-4" onclick="window.location.href='proteccion-pies.html'">
-                <i class="fas fa-shoe-prints"></i> Protección de Pies
+                <i class="fas fa-shoe-prints"></i> Calzado de seguridad
             </h2>
         </section>
 
@@ -201,17 +183,6 @@
             </h2>
         </section>
 
-        <!-- Protección de Altura -->
-        <section class="my-8 product-section"
-            data-keywords="arnes eslinga altura proteccion caida linea vida seguridad cuerda">
-            <img src="Images/PROTECCION-ALTURA.png" alt="Protección de Altura" class="section-image"
-                onclick="window.location.href='proteccion-altura.html'">
-            <h2 class="section-header text-xl font-semibold mb-4"
-                onclick="window.location.href='proteccion-altura.html'"><i class="fas fa-mountain"></i> Protección de
-                Altura
-            </h2>
-        </section>
-
         <!-- Protección Visual -->
         <section class="my-8 product-section"
             data-keywords="gafas lentes ojos proteccion visual seguridad monogafas careta">
@@ -222,14 +193,45 @@
             </h2>
         </section>
 
-        <!-- Señalizaciones -->
+        <!-- Equipos de altura -->
+        <section class="my-8 product-section"
+            data-keywords="arnes eslinga altura proteccion caida linea vida seguridad cuerda">
+            <img src="Images/PROTECCION-ALTURA.png" alt="Equipos de altura" class="section-image"
+                onclick="window.location.href='proteccion-altura.html'">
+            <h2 class="section-header text-xl font-semibold mb-4"
+                onclick="window.location.href='proteccion-altura.html'"><i class="fas fa-mountain"></i> Equipos de
+                Altura
+            </h2>
+        </section>
+
+        <!-- Señalizaciones y equipos de emergencia -->
         <section class="my-8 product-section"
             data-keywords="señalizacion señal aviso advertencia cartel letreros seguridad industrial">
-            <img src="Images/SEÑALIZACIONES.png" alt="Señalizaciones" class="section-image"
+            <img src="Images/SEÑALIZACIONES.png" alt="Señalizaciones y equipos de emergencia" class="section-image"
                 onclick="window.location.href='senalizaciones.html'">
             <h2 class="section-header text-xl font-semibold mb-4" onclick="window.location.href='senalizaciones.html'">
                 <i class="fas fa-exclamation-triangle"></i>
-                Señalizaciones
+                Señalizaciones y equipos de emergencia
+            </h2>
+        </section>
+
+        <!-- Extintores -->
+        <section class="my-8 product-section"
+            data-keywords="extintor extintores fuego incendio seguridad emergencia abc co2 solkaflam">
+            <img src="Images/EXTINTORES.png" alt="Extintores" class="section-image"
+                onclick="window.location.href='extintores.html'">
+            <h2 class="section-header text-xl font-semibold mb-4" onclick="window.location.href='extintores.html'"><i
+                    class="fas fa-fire-extinguisher"></i> Extintores
+            </h2>
+        </section>
+
+        <!-- Kit Antiderrame -->
+        <section class="my-8 product-section"
+            data-keywords="kit antiderrame derrame emergencia ambiental limpieza contención absorbente">
+            <img src="Images/KIT-ANTIDERRAME.jpg" alt="Kit Antiderrame" class="section-image"
+                onclick="window.location.href='kit-antiderrame.html'">
+            <h2 class="section-header text-xl font-semibold mb-4" onclick="window.location.href='kit-antiderrame.html'">
+                <i class="fas fa-tint"></i> Kit Antiderrame
             </h2>
         </section>
     </main>
@@ -351,109 +353,11 @@
                 formatProductCardPrices();
             }
 
-            // ========== NUEVA LÓGICA DE BÚSQUEDA MEJORADA (MÚLTIPLES INSTANCIAS) ==========
-            const searchInputs = document.querySelectorAll('.search-input');
-            const searchBtns = document.querySelectorAll('.btn-search');
-            const clearBtns = document.querySelectorAll('.btn-clear');
-            const sections = document.querySelectorAll('main section.product-section');
-
-            // Función de filtrado para INDEX (categorias)
-            function filterProducts(query) {
-                const searchQuery = query.toLowerCase().trim();
-
-                sections.forEach(section => {
-                    const title = section.querySelector('h2').textContent.toLowerCase();
-                    const keywords = section.getAttribute('data-keywords') || '';
-                    const searchableText = title + ' ' + keywords.toLowerCase();
-
-                    // Buscar en título y keywords
-                    const hasMatch = searchableText.includes(searchQuery);
-                    if (hasMatch) {
-                        section.classList.remove('search-hidden');
-                    } else {
-                        section.classList.add('search-hidden');
-                    }
-                });
-            }
-
-            // Sincronizar todos los inputs de búsqueda
-            function syncSearchInputs(currentInput) {
-                const value = currentInput.value;
-                searchInputs.forEach(input => {
-                    if (input !== currentInput) {
-                        input.value = value;
-                    }
-                });
-            }
-
-            // Mostrar/Ocultar botón X según el contenido
-            function toggleClearButton(input) {
-                const container = input.closest('#search-container') || input.parentElement;
-                const clearBtn = container.querySelector('.btn-clear');
-                if (clearBtn) {
-                    if (input.value.trim() !== '') {
-                        clearBtn.classList.remove('hidden');
-                    } else {
-                        clearBtn.classList.add('hidden');
-                    }
-                }
-            }
-
-            // Configurar cada input de búsqueda
-            searchInputs.forEach(searchInput => {
-                searchInput.addEventListener('keyup', function (e) {
-                    syncSearchInputs(this);
-                    toggleClearButton(this);
-                    // Actualizar visibilidad de todos los botones X
-                    searchInputs.forEach(input => toggleClearButton(input));
-                    filterProducts(this.value);
-
-                    // También buscar al presionar Enter
-                    if (e.key === 'Enter') {
-                        filterProducts(this.value);
-                    }
-                });
-            });
-
-            // Configurar cada botón de búsqueda (lupa)
-            searchBtns.forEach(searchBtn => {
-                searchBtn.addEventListener('click', function () {
-                    const container = this.closest('#search-container') || this.parentElement.parentElement;
-                    const input = container.querySelector('.search-input');
-                    if (input) {
-                        filterProducts(input.value);
-                    }
-                });
-            });
-
-            // Configurar cada botón X (limpiar)
-            clearBtns.forEach(clearBtn => {
-                clearBtn.addEventListener('click', function () {
-                    const container = this.closest('#search-container') || this.parentElement;
-                    const input = container.querySelector('.search-input');
-                    if (input) {
-                        input.value = '';
-                        // Sincronizar todos los inputs
-                        searchInputs.forEach(inp => {
-                            inp.value = '';
-                        });
-                        // Ocultar todos los botones X
-                        clearBtns.forEach(btn => {
-                            btn.classList.add('hidden');
-                        });
-                        // Mostrar todas las secciones
-                        sections.forEach(section => {
-                            section.classList.remove('search-hidden');
-                        });
-                        input.focus();
-                    }
-                });
-            });
-
             // Toggle sections
             document.querySelectorAll('.section-header').forEach(header => {
                 header.addEventListener('click', function () {
                     const grid = this.nextElementSibling;
+                    if (!grid) return;
                     if (grid.style.display === 'none' || grid.style.display === '') {
                         grid.style.display = 'block';
                     } else {
@@ -471,7 +375,7 @@
             <span class="text-gray-400 text-sm font-medium">Espacio Patrocinado</span>
         </div>
     </div>
-    <footer style="background: linear-gradient(135deg, #E65100 0%, #424242 100%);" class="text-white mt-16">
+    <footer class="text-white mt-16 bg-gradient-to-r from-[#FF6B5A] to-[#E55B4A]">
         <!-- Contenido Principal del Footer -->
         <div class="max-w-7xl mx-auto px-6 py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
