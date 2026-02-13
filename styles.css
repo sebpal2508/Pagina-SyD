@@ -153,12 +153,11 @@ body {
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* Limitar ancho visual del input de búsqueda y centrarlo
@@ -197,6 +196,12 @@ body {
     background: linear-gradient(135deg, #D84315 0%, #303030 100%);
     box-shadow: 0 4px 10px rgba(230, 81, 0, 0.5);
     transform: translateY(-2px);
+}
+
+.brand-marquee img {
+    height: 48px;
+    width: 128px;
+    object-fit: contain;
 }
 
 @keyframes bounce-slow {
@@ -745,4 +750,19 @@ input[type="number"][data-product] {
     opacity: 0.9 !important;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2) !important;
     transform: translateY(-2px);
+}
+
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: marquee-scroll 28s linear infinite;
+    will-change: transform;
 }

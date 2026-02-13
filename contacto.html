@@ -364,6 +364,15 @@
 
         whatsappBtn.addEventListener('click', generateWhatsAppMessage);
 
+        if (contactForm) {
+            contactForm.addEventListener('submit', (event) => {
+                if (location.hostname === '127.0.0.1' || location.hostname === 'localhost') {
+                    event.preventDefault();
+                    window.location.href = 'gracias.html';
+                }
+            });
+        }
+
         if (messageField) {
             messageField.addEventListener('input', () => {
                 messageAuto = false;
